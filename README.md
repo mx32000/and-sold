@@ -66,13 +66,11 @@ src
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Set Up Authentication    |    H     |     4 hrs      |     0 hrs     |    TBD    |
+| Create Up Auctions Table |    H     |     2 hrs      |     0 hrs     |     TBD     |
+| TOTAL               |          |     6 hrs      |     0 hrs     |     TBD     |
 
 <br>
 
