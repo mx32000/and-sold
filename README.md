@@ -1,7 +1,7 @@
 
 ## Overview
 
-**And...Sold!** is a companion app for organizations running auctions. Users can create auctions, and for each auction, can keep track of a list of dealers, bidders, and lots. There is a screen just for entering bids, and also a screen for registering and checking out bidders.
+_**And...Sold!** is a companion app for organizations running auctions. Users can create auctions, and for each auction, can keep track of a list of dealers, bidders, and lots. There is a screen just for entering bids, and also a screen for registering and checking out bidders._
 
 
 <br>
@@ -9,7 +9,7 @@
 ## MVP
 
 
-_The **And...Sold!** MVP consists of all of the basic screens and backend functions needed to perform the capabilities listed in the description. The MVP styling includes at least 2 media queries for responsive design. The project will have a RESTful JSON API with CRUD actions on tables. _
+_The **And...Sold!** MVP consists of all of the basic screens and backend functions needed to perform the capabilities listed in the description. The MVP styling includes at least 2 media queries for responsive design. The project will have a RESTful JSON API with CRUD actions on tables._
 
 <br>
 
