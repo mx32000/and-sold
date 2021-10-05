@@ -1,8 +1,20 @@
+import { useState } from "react"
+
 export default function SignIn(props) {
   const [form, setForm] = useState({
     username: "",
     password: ""
   })
+
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setForm(prevState => ({ ...prevState, [name]: value }));
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    props.handleLogin(form);
+  }
 
   return(
     <form onSubmit={handleSubmit}>
@@ -23,7 +35,8 @@ export default function SignIn(props) {
         id="password"
         value={form.password}
         placeholder="Password"
-        onChange={handleChange}/>
+        onChange={handleChange}
+      />
       <button>Submit</button>
     </form>
   )

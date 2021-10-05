@@ -2,6 +2,7 @@ import './App.css';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { loginUser, registerUser, verifyUser } from './services/auth';
+import SignIn from './screens/SignIn';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -31,7 +32,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route path="/signin">
-          <h1>sign in page</h1>
+          <SignIn handleLogin={handleLogin} />
         </Route>
         <Route path="/signup">
           <h1>sign up page</h1>
