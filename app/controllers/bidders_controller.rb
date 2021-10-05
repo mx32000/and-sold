@@ -2,19 +2,19 @@ class BiddersController < ApplicationController
   before_action :set_bidder, only: %i[show update destroy]
   before_action :set_auction, only: %i[index create]
 
-  # GET /bidders
+  # GET /auctions/1/bidders
   def index
     @bidders = Bidder.where(auction_id: @auction.id)
 
     render json: @bidders
   end
 
-  # GET /bidders/1
+  # GET /auctions/1/bidders/1
   def show
     render json: @bidder
   end
 
-  # POST /bidders
+  # POST /auctions/1/bidders
   def create
     @bidder = Bidder.new(bidder_params)
     @bidder.auction = @auction
@@ -26,7 +26,7 @@ class BiddersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /bidders/1
+  # PATCH/PUT /auctions/1/bidders/1
   def update
     if @bidder.update(bidder_params)
       render json: @bidder
@@ -35,7 +35,7 @@ class BiddersController < ApplicationController
     end
   end
 
-  # DELETE /bidders/1
+  # DELETE /auctions/1/bidders/1
   def destroy
     @bidder.destroy
   end

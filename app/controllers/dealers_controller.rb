@@ -1,21 +1,23 @@
 class DealersController < ApplicationController
   before_action :set_dealer, only: %i[show update destroy]
+  before_action :set_auction, only: %i[index create]
 
-  # GET /dealers
+  # GET /auctions/1/dealers
   def index
-    @dealers = Dealer.all
+    @dealers = Dealer.where(auction_id: @auction.id)
 
     render json: @dealers
   end
 
-  # GET /dealers/1
+  # GET /auctions/1/dealers/1
   def show
     render json: @dealer
   end
 
-  # POST /dealers
+  # POST /auctions/1/dealers
   def create
     @dealer = Dealer.new(dealer_params)
+    @dealer.auction = @auction
 
     if @dealer.save
       render json: @dealer, status: :created, location: @dealer
@@ -24,7 +26,7 @@ class DealersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /dealers/1
+  # PATCH/PUT /auctions/1/dealers/1
   def update
     if @dealer.update(dealer_params)
       render json: @dealer
@@ -33,7 +35,7 @@ class DealersController < ApplicationController
     end
   end
 
-  # DELETE /dealers/1
+  # DELETE /auctions/1/dealers/1
   def destroy
     @dealer.destroy
   end
@@ -43,6 +45,10 @@ class DealersController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_dealer
     @dealer = Dealer.find(params[:id])
+  end
+
+  def set_auction
+    @auction = Auction.find(params[:auction_id])
   end
 
   # Only allow a list of trusted parameters through.
