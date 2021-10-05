@@ -1,6 +1,7 @@
 class LotsController < ApplicationController
   before_action :set_lot, only: %i[show update destroy]
   before_action :set_auction, only: %i[index create]
+  before_action :authorize_request
 
   # GET /auctions/1/lots
   def index

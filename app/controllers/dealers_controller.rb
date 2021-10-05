@@ -1,6 +1,7 @@
 class DealersController < ApplicationController
   before_action :set_dealer, only: %i[show update destroy]
   before_action :set_auction, only: %i[index create]
+  before_action :authorize_request
 
   # GET /auctions/1/dealers
   def index
