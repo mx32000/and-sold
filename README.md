@@ -72,35 +72,35 @@ src
 | Create Auctions Table |    H     |     1.5 hrs      |     0 hrs     |     TBD     |
 | Create Dealers Table |    H     |     1.5 hrs      |     0 hrs     |     TBD     |
 | Create Bidders Table |    H     |     1.5 hrs      |     0 hrs     |     TBD     |
-| Create Lots Table |    H     |     1.5 hrs      |     0 hrs     |     TBD     |
-| Create Payments Table |    M     |     1.5 hrs      |     0 hrs     |     TBD     |
+| Create Lots Table |    M     |     1.5 hrs      |     0 hrs     |     TBD     |
+| Create Payments Table |    L     |     1.5 hrs      |     0 hrs     |     TBD     |
 | Add Associations |    H     |     1.5 hrs      |     0 hrs     |     TBD     |
 | Auctions Backend CRUD |    H     |     1 hr      |     0 hrs     |     TBD     |
 | Dealers Backend CRUD |    H     |     1 hr      |     0 hrs     |     TBD     |
 | Bidders Backend CRUD |    H     |     1 hr      |     0 hrs     |     TBD     |
-| Lots Backend CRUD |    H     |     1.5 hrs      |     0 hrs     |     TBD     |
+| Lots Backend CRUD |    M     |     1.5 hrs      |     0 hrs     |     TBD     |
 | Transactions Backend CRUD |    H     |     1 hr      |     0 hrs     |     TBD     |
 | Set Up React File Architecture |    L     |     .5 hr      |     0 hrs     |     TBD     |
 | Sign Up/Sign in screens |    H     |     2 hrs      |     0 hrs     |     TBD     |
 | Routes and Links |    H     |     1.5 hrs      |     0 hrs     |     TBD     |
 | Navbar |    H     |     4 hrs     |     0 hrs     |     TBD     |
-| Auctions Screen |    H     |     1.5 hrs      |     0 hrs     |     TBD     |
+| Auctions Screen |    H    |     1.5 hrs      |     0 hrs     |     TBD     |
 | Auctions Frontend CRU Services |    H     |     1 hr      |     0 hrs     |     TBD     |
 | Dealers Frontend CRU Services |    H     |     1 hr      |     0 hrs     |     TBD     |
 | Bidders Frontend CRU Services |    H     |     1 hr      |     0 hrs     |     TBD     |
-| Lots Frontend CRUD Services |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Payments Frontend Services |    H     |     1.5 hrs      |     0 hrs     |     TBD     |
+| Lots Frontend CRUD Services |    L     |     2 hrs      |     0 hrs     |     TBD     |
+| Payments Frontend Services |    L     |     1.5 hrs      |     0 hrs     |     TBD     |
 | Bubble Table |    L     |     3 hrs      |     0 hrs     |     TBD     |
-| Bid Entry Screen |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Transaction Handler |    H     |     3 hrs      |     0 hrs     |     TBD     |
+| Bid Entry Screen |    M     |     2 hrs      |     0 hrs     |     TBD     |
+| Transaction Handler |    L     |     3 hrs      |     0 hrs     |     TBD     |
 | Add/Edit Auction Screens |    H     |     2 hrs      |     0 hrs     |     TBD     |
 | Bidders Screen |    H     |     1 hr      |     0 hrs     |     TBD     |
 | Add/Edit Bidder Screens |    H     |     2 hrs      |     0 hrs     |     TBD     |
 | Dealers Screen |    H     |     1 hr      |     0 hrs     |     TBD     |
 | Add/Edit Dealer Screens |    H     |     2 hrs      |     0 hrs     |     TBD     |
-| Lots Page |    M     |     2 hrs      |     0 hrs     |     TBD     |
+| Lots Page |    L     |     2 hrs      |     0 hrs     |     TBD     |
 | Add/Edit Lot Screens |    H     |     3 hrs      |     0 hrs     |     TBD     |
-| Clerk Screen |    M     |     3 hrs      |     0 hrs     |     TBD     |
+| Clerk Screen |    L     |     3 hrs      |     0 hrs     |     TBD     |
 | TOTAL               |          |     59.5 hrs      |     0 hrs     |     TBD     |
 
 <br>
