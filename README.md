@@ -68,13 +68,13 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Set Up Authentication    |    H     |     4 hrs      |     .5 hrs     |    TBD    |
-| Create Auctions Table |    H     |     1.5 hrs      |     .25 hrs     |     TBD     |
+| Set Up Authentication    |    H     |     4 hrs      |     1 hr     |    TBD    |
+| Create Auctions Table |    H     |     1.5 hrs      |     1 hrs     |     TBD     |
 | Create Dealers Table |    H     |     1.5 hrs      |     .25 hrs     |     TBD     |
 | Create Bidders Table |    H     |     1.5 hrs      |     .25 hrs     |     TBD     |
 | Create Lots Table |    M     |     1.5 hrs      |     .25 hrs     |     TBD     |
 | Create Payments Table |    L     |     1.5 hrs      |     0 hrs     |     TBD     |
-| Add Associations |    H     |     1.5 hrs      |     .5 hrs     |     TBD     |
+| Add Associations |    H     |     1.5 hrs      |     1 hrs     |     TBD     |
 | Auctions Backend CRUD |    H     |     1 hr      |     0 hrs     |     TBD     |
 | Dealers Backend CRUD |    H     |     1 hr      |     0 hrs     |     TBD     |
 | Bidders Backend CRUD |    H     |     1 hr      |     0 hrs     |     TBD     |

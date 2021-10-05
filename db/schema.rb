@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_05_015441) do
+ActiveRecord::Schema.define(version: 2021_10_05_144456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,10 +61,8 @@ ActiveRecord::Schema.define(version: 2021_10_05_015441) do
     t.float "price"
     t.bigint "dealer_id", null: false
     t.bigint "bidder_id"
-    t.bigint "auction_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["auction_id"], name: "index_lots_on_auction_id"
     t.index ["bidder_id"], name: "index_lots_on_bidder_id"
     t.index ["dealer_id"], name: "index_lots_on_dealer_id"
   end
@@ -81,7 +79,6 @@ ActiveRecord::Schema.define(version: 2021_10_05_015441) do
   add_foreign_key "auctions", "users"
   add_foreign_key "bidders", "auctions"
   add_foreign_key "dealers", "auctions"
-  add_foreign_key "lots", "auctions"
   add_foreign_key "lots", "bidders"
   add_foreign_key "lots", "dealers"
 end
