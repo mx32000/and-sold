@@ -53,6 +53,6 @@ class LotsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def lot_params
-    params.require(:lot).permit(:number, :description, :price, :dealer_id, :buyer_id)
+    params.require(:lot).permit(:number, :description, :price, :dealer_id, :bidder_id)
   end
 end
