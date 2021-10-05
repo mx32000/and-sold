@@ -76,9 +76,9 @@ src
 | Create Payments Table |    L     |     1.5 hrs      |     0 hrs     |     TBD     |
 | Add Associations |    H     |     1.5 hrs      |     1 hrs     |     TBD     |
 | Auctions Backend CRUD |    H     |     1 hr      |     .5 hrs     |     TBD     |
-| Dealers Backend CRUD |    H     |     1 hr      |     .75 hrs     |     TBD     |
-| Bidders Backend CRUD |    H     |     1 hr      |     .75 hrs     |     TBD     |
-| Lots Backend CRUD |    M     |     1.5 hrs      |     1 hr     |     TBD     |
+| Dealers Backend CRUD |    H     |     1 hr      |     1 hrs     |     TBD     |
+| Bidders Backend CRUD |    H     |     1 hr      |     1 hrs     |     TBD     |
+| Lots Backend CRUD |    M     |     1.5 hrs      |     2 hr     |     TBD     |
 | Transactions Backend CRUD |    H     |     1 hr      |     0 hrs     |     TBD     |
 | Set Up React File Architecture |    L     |     .5 hr      |     0 hrs     |     TBD     |
 | Sign Up/Sign in screens |    H     |     2 hrs      |     0 hrs     |     TBD     |
