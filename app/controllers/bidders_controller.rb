@@ -1,5 +1,5 @@
 class BiddersController < ApplicationController
-  before_action :set_bidder, only: %i[show update destroy]
+  before_action :set_bidder, only: %i[show update destroy show_with_lots]
   before_action :set_auction, only: %i[index create]
   before_action :authorize_request
 
@@ -12,7 +12,11 @@ class BiddersController < ApplicationController
 
   # GET /auctions/1/bidders/1
   def show
-    render json: @bidder
+    if params[:lots]
+      render json: @bidder, include: :lots
+    else
+      render json: @bidder
+    end
   end
 
   # POST /auctions/1/bidders
@@ -20,9 +24,7 @@ class BiddersController < ApplicationController
     @bidder = Bidder.new(bidder_params)
     @bidder.auction = @auction
 
-    if !@bidder.number
-      @bidder.number = Bidder.order(number: :desc).first.number + 1
-    end
+    @bidder.number ||= Bidder.order(number: :desc).first.number + 1
 
     if @bidder.save
       render json: @bidder, status: :created

@@ -10,9 +10,13 @@ class DealersController < ApplicationController
     render json: @dealers
   end
 
-  # GET /auctions/1/dealers/1
+  # GET /auctions/1/dealers/1 or GET /auctions/1/dealers/1?lots=true
   def show
-    render json: @dealer
+    if params[:lots]
+      render json: @dealer, include: :lots
+    else
+      render json: @dealer
+    end
   end
 
   # POST /auctions/1/dealers
