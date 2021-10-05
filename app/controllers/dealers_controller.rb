@@ -53,6 +53,6 @@ class DealersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def dealer_params
-    params.require(:dealer).permit(:name, :phone_number, :email, :address, :auction_id)
+    params.require(:dealer).permit(:name, :phone_number, :email, :address)
   end
 end
