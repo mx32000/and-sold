@@ -1,5 +1,5 @@
 class BiddersController < ApplicationController
-  before_action :set_bidder, only: [:show, :update, :destroy]
+  before_action :set_bidder, only: %i[show update destroy]
 
   # GET /bidders
   def index
@@ -39,13 +39,14 @@ class BiddersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_bidder
-      @bidder = Bidder.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def bidder_params
-      params.require(:bidder).permit(:name, :number, :tax_exempt, :phone_number, :email, :address, :auction_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_bidder
+    @bidder = Bidder.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def bidder_params
+    params.require(:bidder).permit(:name, :number, :tax_exempt, :phone_number, :email, :address, :auction_id)
+  end
 end
