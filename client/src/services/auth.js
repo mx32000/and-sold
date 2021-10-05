@@ -13,3 +13,13 @@ export const registerUser = async registerData => {
   api.defaults.headers.common.authorization = `Bearer ${res.data.token}`;
   return res.data.user;
 }
+
+export const verifyUser = async () => {
+  const token = localStorage.getItem("andSoldToken");
+  if (token) {
+    api.defaults.headers.common.authorization = `Bearer ${token}`;
+    const res = await api.get("/auth/verify");
+    return res.data;
+  }
+  return null;
+}
