@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :lots
   resources :bidders
   resources :dealers
   resources :auctions
