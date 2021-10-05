@@ -5,14 +5,14 @@ class LotsController < ApplicationController
 
   # GET /auctions/1/lots
   def index
-    @lots = Lot.where(auction_id: @auction.id)
+    @lots = Lot.where(dealer: Dealer.where(auction: @auction))
 
-    render json: @lots
+    render json: @auction, include: :lots, only: :lots
   end
 
   # GET /auctions/1/lots/1
   def show
-    render json: @lot
+    render json: @lot, include: %i[dealer bidder]
   end
 
   # POST /auctions/1/lots
