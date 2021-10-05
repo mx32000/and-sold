@@ -74,7 +74,7 @@ src
 | Create Bidders Table |    H     |     1.5 hrs      |     .25 hrs     |     TBD     |
 | Create Lots Table |    M     |     1.5 hrs      |     .25 hrs     |     TBD     |
 | Create Payments Table |    L     |     1.5 hrs      |     0 hrs     |     TBD     |
-| Add Associations |    H     |     1.5 hrs      |     .25 hrs     |     TBD     |
+| Add Associations |    H     |     1.5 hrs      |     .5 hrs     |     TBD     |
 | Auctions Backend CRUD |    H     |     1 hr      |     0 hrs     |     TBD     |
 | Dealers Backend CRUD |    H     |     1 hr      |     0 hrs     |     TBD     |
 | Bidders Backend CRUD |    H     |     1 hr      |     0 hrs     |     TBD     |
