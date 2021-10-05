@@ -21,7 +21,7 @@ class DealersController < ApplicationController
     @dealer.auction = @auction
 
     if @dealer.save
-      render json: @dealer, status: :created, location: @dealer
+      render json: @dealer, status: :created
     else
       render json: @dealer.errors, status: :unprocessable_entity
     end

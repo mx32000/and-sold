@@ -20,7 +20,7 @@ class AuctionsController < ApplicationController
     @auction.user = @current_user
 
     if @auction.save
-      render json: @auction, status: :created, location: @auction
+      render json: @auction, status: :created
     else
       render json: @auction.errors, status: :unprocessable_entity
     end

@@ -21,7 +21,7 @@ class LotsController < ApplicationController
     @lot.auction = @auction
 
     if @lot.save
-      render json: @lot, status: :created, location: @lot
+      render json: @lot, status: :created
     else
       render json: @lot.errors, status: :unprocessable_entity
     end

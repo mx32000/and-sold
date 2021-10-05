@@ -20,8 +20,12 @@ class BiddersController < ApplicationController
     @bidder = Bidder.new(bidder_params)
     @bidder.auction = @auction
 
+    if !@bidder.number
+      @bidder.number = Bidder.order(number: :desc).first.number + 1
+    end
+
     if @bidder.save
-      render json: @bidder, status: :created, location: @bidder
+      render json: @bidder, status: :created
     else
       render json: @bidder.errors, status: :unprocessable_entity
     end
