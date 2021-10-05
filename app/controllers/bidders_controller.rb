@@ -1,9 +1,10 @@
 class BiddersController < ApplicationController
   before_action :set_bidder, only: %i[show update destroy]
+  before_action :set_auction, only: %i[index create]
 
   # GET /bidders
   def index
-    @bidders = Bidder.all
+    @bidders = Bidder.where(auction_id: @auction.id)
 
     render json: @bidders
   end
@@ -16,6 +17,7 @@ class BiddersController < ApplicationController
   # POST /bidders
   def create
     @bidder = Bidder.new(bidder_params)
+    @bidder.auction = @auction
 
     if @bidder.save
       render json: @bidder, status: :created, location: @bidder
@@ -45,8 +47,12 @@ class BiddersController < ApplicationController
     @bidder = Bidder.find(params[:id])
   end
 
+  def set_auction
+    @auction = Auction.find(params[:auction_id])
+  end
+
   # Only allow a list of trusted parameters through.
   def bidder_params
-    params.require(:bidder).permit(:name, :number, :tax_exempt, :phone_number, :email, :address, :auction_id)
+    params.require(:bidder).permit(:name, :number, :tax_exempt, :phone_number, :email, :address)
   end
 end
