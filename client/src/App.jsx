@@ -1,7 +1,7 @@
 import './App.css';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { loginUser } from './services/auth';
+import { loginUser, registerUser } from './services/auth';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -9,6 +9,12 @@ function App() {
 
   const handleLogin = async loginData => {
     const userData = await loginUser(loginData);
+    setCurrentUser(userData);
+    history.push("/");
+  }
+
+  const handleRegister = async registerData => {
+    const userData = await registerUser(registerData);
     setCurrentUser(userData);
     history.push("/");
   }
