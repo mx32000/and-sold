@@ -30,6 +30,12 @@ function App() {
   return (
     <div className="App">
       <Switch>
+        <Route path="/signin">
+          <h1>sign in page</h1>
+        </Route>
+        <Route path="/signup">
+          <h1>sign up page</h1>
+        </Route>
         <Route path="/">
           <h1>hello</h1>
         </Route>

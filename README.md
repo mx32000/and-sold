@@ -68,7 +68,7 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Set Up Authentication    |    H     |     4 hrs      |     1 hr     |    TBD    |
+| Set Up Authentication    |    H     |     4 hrs      |     1.5 hr     |    TBD    |
 | Create Auctions Table |    H     |     1.5 hrs      |     1 hrs     |     TBD     |
 | Create Dealers Table |    H     |     1.5 hrs      |     .25 hrs     |     TBD     |
 | Create Bidders Table |    H     |     1.5 hrs      |     .25 hrs     |     TBD     |
