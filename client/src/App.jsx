@@ -3,6 +3,7 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { loginUser, registerUser, verifyUser } from './services/auth';
 import SignIn from './screens/SignIn';
+import SignUp from './screens/SignUp';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -35,7 +36,7 @@ function App() {
           <SignIn handleLogin={handleLogin} />
         </Route>
         <Route path="/signup">
-          <h1>sign up page</h1>
+          <SignUp handleRegister={handleRegister} />
         </Route>
         <Route path="/">
           <h1>hello</h1>

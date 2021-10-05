@@ -17,9 +17,8 @@ export default function SignIn(props) {
   }
 
   return(
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} id="sign-in">
       <h1>Sign in</h1>
-      <label htmlFor="username">Username:</label>
       <input 
         type="text" 
         name="username" 
@@ -28,7 +27,6 @@ export default function SignIn(props) {
         onChange={handleChange} 
         placeholder="Username"
       />
-      <label htmlFor="password">Password:</label>
       <input 
         type="password"
         name="password"
@@ -37,7 +35,7 @@ export default function SignIn(props) {
         placeholder="Password"
         onChange={handleChange}
       />
-      <button>Submit</button>
+      <button>Sign in</button>
     </form>
   )
 }
