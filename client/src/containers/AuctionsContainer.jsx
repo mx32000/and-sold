@@ -30,7 +30,7 @@ export default function AuctionsContainer(props) {
           <AuctionContainer />
         </Route>
         <Route path="/auctions">
-          <Auctions />
+          <Auctions auctions={userAuctions}/>
         </Route>
       </Switch>
     </div>
