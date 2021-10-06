@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
+import "../assets/screens/SignUp.css";
 
 export default function SignUp(props) {
   const [form, setForm] = useState({
