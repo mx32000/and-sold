@@ -15,7 +15,7 @@ export default function AuctionsContainer(props) {
       setUserAuctions(auctions);
     }
     fetchAuctions();
-  }, [])
+  }, [props.user])
 
   return(
     <div className="auctions-container">

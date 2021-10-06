@@ -40,7 +40,7 @@ function App() {
           <SignUp handleRegister={handleRegister} />
         </Route>
         <Route path="/auctions">
-          <AuctionsContainer />
+          <AuctionsContainer user={currentUser}/>
         </Route>
       </Switch>
     </div>
