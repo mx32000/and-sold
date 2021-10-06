@@ -6,7 +6,7 @@ import Auctions from "../screens/Auctions/Auctions";
 
 export default function AuctionsContainer(props) {
   return(
-    <div class="auctions-container">
+    <div className="auctions-container">
       <Switch>
         <Route path="/auctions/new">
           <AuctionCreate />
