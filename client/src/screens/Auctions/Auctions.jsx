@@ -11,6 +11,8 @@ export default function Auctions(props) {
             {
               props.auctions.map(auction => <Auction auction={auction} key={auction.id}/>)
             }
+            <p>Have another auction to add?</p>
+            <Link to="/auctions/new"><button>Add an auction</button></Link>
           </>
         ) : (
           <>
