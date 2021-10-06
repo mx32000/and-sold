@@ -2,8 +2,10 @@ import './App.css';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { loginUser, registerUser, verifyUser } from './services/auth';
+import { Redirect } from 'react-router';
 import SignIn from './screens/SignIn';
 import SignUp from './screens/SignUp';
+import AuctionsContainer from './containers/AuctionsContainer';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -38,8 +40,8 @@ function App() {
         <Route path="/signup">
           <SignUp handleRegister={handleRegister} />
         </Route>
-        <Route path="/">
-          <h1>hello</h1>
+        <Route path="/auctions">
+          <AuctionsContainer />
         </Route>
       </Switch>
     </div>
