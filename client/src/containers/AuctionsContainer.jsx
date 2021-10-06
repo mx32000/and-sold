@@ -23,10 +23,10 @@ export default function AuctionsContainer(props) {
         <Route path="/auctions/new">
           <AuctionCreate />
         </Route>
-        <Route path="/auctions/:id/edit">
+        <Route path="/auctions/:auction_id/edit">
           <AuctionEdit />
         </Route>
-        <Route path="/auctions/:id">
+        <Route path="/auctions/:auction_id">
           <AuctionContainer />
         </Route>
         <Route path="/auctions">
