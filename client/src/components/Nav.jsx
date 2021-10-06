@@ -25,7 +25,7 @@ export default function Nav(props) {
                   </>
                 }
                 <Link to={"/auctions"}>Auctions</Link>
-                <button onClick={handleLogout}>Log out</button>
+                <button onClick={handleLogout}>Sign out</button>
               </>
             )
         }

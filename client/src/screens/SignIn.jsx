@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
-import Layout from "../components/Layout";
 import "../assets/screens/SignIn.css";
 
 export default function SignIn(props) {
@@ -20,28 +19,26 @@ export default function SignIn(props) {
   }
 
   return(
-    <Layout>
-      <form onSubmit={handleSubmit} id="sign-in">
-        <h1>Sign in</h1>
-        <input 
-          type="text" 
-          name="username" 
-          id="username" 
-          value={form.username} 
-          onChange={handleChange} 
-          placeholder="Username"
-        />
-        <input 
-          type="password"
-          name="password"
-          id="password"
-          value={form.password}
-          placeholder="Password"
-          onChange={handleChange}
-        />
-        <button>Sign in</button>
-        <Link to="/signup">Don't have an account? Sign up here!</Link>
-      </form>
-    </Layout>
+    <form onSubmit={handleSubmit} id="sign-in">
+      <h1>Sign in</h1>
+      <input 
+        type="text" 
+        name="username" 
+        id="username" 
+        value={form.username} 
+        onChange={handleChange} 
+        placeholder="Username"
+      />
+      <input 
+        type="password"
+        name="password"
+        id="password"
+        value={form.password}
+        placeholder="Password"
+        onChange={handleChange}
+      />
+      <button>Sign in</button>
+      <Link to="/signup">Don't have an account? Sign up here!</Link>
+    </form>
   )
 }

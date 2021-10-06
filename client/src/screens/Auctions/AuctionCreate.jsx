@@ -1,9 +1,5 @@
-import Layout from "../../components/Layout";
-
-export default function AuctionCreate(props) {
+export default function AuctionCreate() {
   return(
-    <Layout signedIn={true}>
-      <h1>auction create</h1>
-    </Layout>
+    <h1>auction create</h1>
   )
 }

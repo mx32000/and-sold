@@ -5,9 +5,11 @@ import AuctionContainer from "./AuctionContainer";
 import Auctions from "../screens/Auctions/Auctions";
 import { useEffect, useState } from "react";
 import { getUserAuctions } from "../services/auctions";
+import Layout from "../components/Layout";
 
 export default function AuctionsContainer(props) {
   const [userAuctions, setUserAuctions] = useState([]);
+  const { user, handleLogout } = props;
 
   useEffect(() => {
     const fetchAuctions = async () => {
@@ -17,20 +19,26 @@ export default function AuctionsContainer(props) {
     fetchAuctions();
   }, [props.user])
 
+  if (!user) return <Layout />
+
   return(
     <div className="auctions-container">
       <Switch>
         <Route path="/auctions/new">
-          <AuctionCreate />
+          <Layout signedIn={true} handleLogout={handleLogout}>
+            <AuctionCreate />
+          </Layout>
         </Route>
         <Route path="/auctions/:auction_id/edit">
-          <AuctionEdit />
+          <AuctionEdit handleLogout={handleLogout}/>
         </Route>
         <Route path="/auctions/:auction_id">
-          <AuctionContainer />
+          <AuctionContainer handleLogout={handleLogout}/>
         </Route>
         <Route path="/auctions">
-          <Auctions auctions={userAuctions}/>
+          <Layout signedIn={true} handleLogout={handleLogout}>
+            <Auctions auctions={userAuctions}/>
+          </Layout>
         </Route>
       </Switch>
     </div>

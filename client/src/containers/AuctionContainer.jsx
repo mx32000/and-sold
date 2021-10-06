@@ -5,12 +5,13 @@ import LotsContainer from "./LotsContainer";
 import AuctionDetail from "../screens/Auctions/AuctionDetail";
 import Layout from "../components/Layout";
 
-export default function AuctionContainer() {
+export default function AuctionContainer(props) {
   const params = useParams();
   const auctionId = params.auction_id;
+  const { handleLogout } = props;
 
   return(
-    <Layout signedIn={true} auctionId={auctionId}>
+    <Layout signedIn={true} auctionId={auctionId} handleLogout={handleLogout}>
       <div className="auction-container">
         <Switch>
           <Route path="/auctions/:auction_id/bidders">

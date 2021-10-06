@@ -1,9 +1,10 @@
 import Nav from "./Nav";
 
 export default function Layout(props) {
+  const { signedIn, auctionId, handleLogout } = props;
   return(
     <>
-      <Nav signedIn={props.signedIn} auctionId={props.auctionId}/>
+      <Nav signedIn={signedIn} auctionId={auctionId} handleLogout={handleLogout}/>
       {props.children}
     </>
   )
