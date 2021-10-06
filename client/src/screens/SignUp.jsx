@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 export default function SignUp(props) {
   const [form, setForm] = useState({
@@ -6,7 +7,7 @@ export default function SignUp(props) {
     username: "",
     email: "",
     password: "",
-    passwordConfirmation: ""
+    password_confirmation: ""
   })
 
   const handleChange = e => {
@@ -56,13 +57,14 @@ export default function SignUp(props) {
       />      
       <input
         type="password"
-        name="passwordConfirmation"
+        name="password_confirmation"
         id="passwordConfirmation"
         placeholder="Confirm Password"
-        value={form.passwordConfirmation}
+        value={form.password_confirmation}
         onChange={handleChange}
       />
       <button>Get started!</button>
+      <Link to="/signin">Already have an account? Sign in here!</Link>
     </form>
   )
 }
