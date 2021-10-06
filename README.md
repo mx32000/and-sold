@@ -82,7 +82,7 @@ src
 | Transactions Backend CRUD |    H     |     1 hr      |     0 hrs     |     TBD     |
 | Set Up React File Architecture |    L     |     .5 hr      |     .5 hr     |     TBD     |
 | Sign Up/Sign in screens |    H     |     2 hrs      |     1.5 hrs     |     TBD     |
-| Routes and Links |    H     |     1.5 hrs      |     0 hrs     |     TBD     |
+| Routes and Links |    H     |     1.5 hrs      |     .5 hrs     |     TBD     |
 | Navbar |    H     |     4 hrs     |     0 hrs     |     TBD     |
 | Auctions Screen |    H    |     1.5 hrs      |     0 hrs     |     TBD     |
 | Auctions Frontend CRU Services |    H     |     1 hr      |     0 hrs     |     TBD     |
