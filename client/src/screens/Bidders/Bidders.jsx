@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom"
+import "../../assets/screens/Bidders/Bidders.css"
 
 export default function Bidders(props) {
   const { bidders } = props;
@@ -21,14 +22,14 @@ export default function Bidders(props) {
       {
         props.bidders.length &&
         <div className="bidders-list">
-          <div className="row">
+          <>
             { 
               columns.map( column => <div className="heading" key={column.title}>{column.title}</div>) 
             }
-          </div>
+          </>
           {
             bidders.map(bidder => (
-              <div className="row" key={bidder.id}>
+              <>
                 {
                   columns.map( column => 
                   <div className="data" key={`${column.title}${bidder.id}`}>
@@ -39,7 +40,7 @@ export default function Bidders(props) {
                     }
                   </div>)
                 }
-              </div>
+              </>
             ))
           }
         </div>
