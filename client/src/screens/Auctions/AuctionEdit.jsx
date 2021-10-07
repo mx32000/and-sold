@@ -27,15 +27,19 @@ export default function AuctionEdit(props) {
     if (auctions.length) {
       prefillForm()
     }
-  }, [])
+  }, [auctions, auctionId])
   
   const handleChange = e => {
     const { name, value } = e.target;
-    setForm(prevState => ({ ...prevState, [name]: value}))
+    const numberInputs = ["tax_rate", "credit_card_fee", "portion_collected"];
+    setForm(prevState => (numberInputs.includes(name) ? 
+      { ...prevState, [name]: value === "" ? "" : Number(value)} : 
+      { ...prevState, [name]: value }
+    ));
   }
   
   const { title, organization, location, dates, notes, tax_rate, credit_card_fee, portion_collected, status } = form;
-  
+
   return(
     <Layout signedIn={true} auctionId={auctionId} handleLogout={handleLogout}>
       {
