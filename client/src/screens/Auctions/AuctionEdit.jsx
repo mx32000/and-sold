@@ -37,6 +37,11 @@ export default function AuctionEdit(props) {
       { ...prevState, [name]: value }
     ));
   }
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    props.handleEditAuction(auctionId, form);
+  }
   
   const { title, organization, location, dates, notes, tax_rate, credit_card_fee, portion_collected, status } = form;
 
@@ -45,10 +50,11 @@ export default function AuctionEdit(props) {
       {
         <div className="auction-create">
           <h1>Enter auction details</h1>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="description details">
               <label htmlFor="title">Title</label>
               <input 
+                required
                 type="text"
                 name="title"
                 id="title"
@@ -120,6 +126,12 @@ export default function AuctionEdit(props) {
                 placeholder=".10"
                 onChange={handleChange}
               />
+              <label htmlFor="status">Status?</label>
+              <select name="status" id="status" value={status} onChange={handleChange}>
+                <option value="upcoming">upcoming</option>
+                <option value="ongoing">ongoing</option>
+                <option value="complete">complete</option>
+              </select>
               <button type="submit">Submit</button>
             </div>
           </form>

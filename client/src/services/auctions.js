@@ -14,3 +14,8 @@ export const createAuction = async auctionData => {
   const res = await api.post(`/auctions`, auctionData);
   return res.data;
 }
+
+export const editAuction = async (id, auctionData) => {
+  const res = await api.put(`/auctions/${id}`, auctionData);
+  return res.data;
+}
