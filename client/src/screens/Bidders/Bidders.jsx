@@ -24,7 +24,11 @@ export default function Bidders(props) {
         <div className="bidders-list">
           <>
             { 
-              columns.map( column => <div className="heading" key={column.title}>{column.title}</div>) 
+              columns.map( column => (
+                <div className={`heading ${column.attribute || "lots"}`} key={column.title}>
+                  {column.title}
+                </div>
+              )) 
             }
           </>
           {
@@ -32,7 +36,7 @@ export default function Bidders(props) {
               <>
                 {
                   columns.map( column => 
-                  <div className="data" key={`${column.title}${bidder.id}`}>
+                  <div className={`data ${column.attribute || "lots"}`} key={`${column.title}${bidder.id}`}>
                     {
                       column.attribute
                         ? (column.boolean ? convertBoolean(bidder[column.attribute]) : bidder[column.attribute])
