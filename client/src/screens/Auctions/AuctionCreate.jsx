@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "../../assets/screens/Auctions/AuctionCreate.css";
 
-export default function AuctionCreate() {
+export default function AuctionCreate(props) {
   const [form, setForm] = useState({
     title: "",
     organization: "",
@@ -20,10 +20,15 @@ export default function AuctionCreate() {
     setForm(prevState => ({ ...prevState, [name]: value}));
   }
 
+  const handleSubmit = e => {
+    e.preventDefault();
+    props.handleCreateAuction({ ...form, status: "upcoming"});
+  }
+
   return(
     <div className="auction-create">
       <h1>Enter auction details</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="description details">
           <label htmlFor="title">Title</label>
           <input 
@@ -98,6 +103,7 @@ export default function AuctionCreate() {
             placeholder=".10"
             onChange={handleChange}
           />
+          <button type="submit">Submit</button>
         </div>
       </form>
     </div>

@@ -33,7 +33,7 @@ export default function AuctionsContainer(props) {
       <Switch>
         <Route path="/auctions/new">
           <Layout signedIn={true} handleLogout={handleLogout}>
-            <AuctionCreate />
+            <AuctionCreate handleCreateAuction={handleCreateAuction}/>
           </Layout>
         </Route>
         <Route path="/auctions/:auction_id/edit">
