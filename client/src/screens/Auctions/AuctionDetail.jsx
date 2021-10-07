@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function AuctionDetail(props) {
   const { auction } = props;
+  
   return(
     auction &&
     <div className="auction-detail">

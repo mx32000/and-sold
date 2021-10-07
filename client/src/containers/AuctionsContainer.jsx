@@ -37,7 +37,7 @@ export default function AuctionsContainer(props) {
           </Layout>
         </Route>
         <Route path="/auctions/:auction_id/edit">
-          <AuctionEdit handleLogout={handleLogout}/>
+          <AuctionEdit handleLogout={handleLogout} auctions={userAuctions}/>
         </Route>
         <Route path="/auctions/:auction_id">
           <AuctionContainer handleLogout={handleLogout}/>
