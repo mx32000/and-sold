@@ -12,6 +12,9 @@ export default function AuctionDetail(props) {
         <p>Organization: {auction.organization}</p>
         <p>Location: {auction.location}</p>
         <p>Dates: {auction.dates}</p>
+        <p>Tax rate: {auction.tax_rate}</p>
+        <p>Credit card convenience fee: {auction.credit_card_fee}</p>
+        <p>Portion of sales collected: {auction.portion_collected}</p>
         <p>Notes: {auction.notes}</p>
         <Link to={`/auctions/${auction.id}/edit`}><button>Edit</button></Link>
       </div>
