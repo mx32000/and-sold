@@ -4,7 +4,7 @@ import AuctionEdit from "../screens/Auctions/AuctionEdit";
 import AuctionContainer from "./AuctionContainer";
 import Auctions from "../screens/Auctions/Auctions";
 import { useEffect, useState } from "react";
-import { createAuction, editAuction, getUserAuctions } from "../services/auctions";
+import { createAuction, editAuction, getUserAuctions, removeAuction } from "../services/auctions";
 import Layout from "../components/Layout";
 
 export default function AuctionsContainer(props) {
@@ -34,6 +34,12 @@ export default function AuctionsContainer(props) {
     history.push(`/auctions/${updatedAuction.id}`)
   }
 
+  const handleRemoveAuction = async id => {
+    await removeAuction(id);
+    setUserAuctions(prevState => prevState.filter(auction => auction.id !== Number(id)));
+    history.push("/auctions");
+  }
+
   return(
     <div className="auctions-container">
       <Switch>
@@ -46,7 +52,7 @@ export default function AuctionsContainer(props) {
           <AuctionEdit handleLogout={handleLogout} auctions={userAuctions} handleEditAuction={handleEditAuction}/>
         </Route>
         <Route path="/auctions/:auction_id">
-          <AuctionContainer handleLogout={handleLogout}/>
+          <AuctionContainer handleLogout={handleLogout} handleRemoveAuction={handleRemoveAuction}/>
         </Route>
         <Route path="/auctions">
           <Layout signedIn={true} handleLogout={handleLogout}>

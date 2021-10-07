@@ -31,7 +31,8 @@ export default function AuctionCreate(props) {
       <form onSubmit={handleSubmit}>
         <div className="description details">
           <label htmlFor="title">Title</label>
-          <input 
+          <input
+            required
             type="text"
             name="title"
             id="title"

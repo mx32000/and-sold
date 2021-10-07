@@ -11,7 +11,7 @@ export default function AuctionContainer(props) {
   const [auction, setAuction] = useState(null);
   const params = useParams();
   const auctionId = params.auction_id;
-  const { handleLogout } = props;
+  const { handleLogout, handleRemoveAuction } = props;
 
   useEffect(() => {
     const fetchAuction = async () => {
@@ -35,7 +35,7 @@ export default function AuctionContainer(props) {
             <LotsContainer auction={auction}/>
           </Route>
           <Route path="/auctions/:auction_id">
-            <AuctionDetail auction={auction}/>
+            <AuctionDetail auction={auction} handleRemoveAuction={handleRemoveAuction}/>
           </Route>
         </Switch>
       </div>

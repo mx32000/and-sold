@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 export default function AuctionDetail(props) {
-  const { auction } = props;
-  
+  const { auction, handleRemoveAuction } = props;
+
   return(
     auction &&
     <div className="auction-detail">
@@ -18,6 +18,7 @@ export default function AuctionDetail(props) {
         <p>Portion of sales collected: {auction.portion_collected}</p>
         <p>Notes: {auction.notes}</p>
         <Link to={`/auctions/${auction.id}/edit`}><button>Edit</button></Link>
+        <button onClick={() => handleRemoveAuction(auction.id)}>Delete</button>
       </div>
     </div>
   )

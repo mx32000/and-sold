@@ -19,3 +19,8 @@ export const editAuction = async (id, auctionData) => {
   const res = await api.put(`/auctions/${id}`, auctionData);
   return res.data;
 }
+
+export const removeAuction = async id => {
+  const res = await api.delete(`/auctions/${id}`);
+  return res.data;
+}
