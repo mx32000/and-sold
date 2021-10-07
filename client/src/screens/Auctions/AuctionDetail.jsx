@@ -20,6 +20,7 @@ export default function AuctionDetail(props) {
         <Link to={`/auctions/${auction.id}/edit`}><button>Edit</button></Link>
         <button onClick={() => handleRemoveAuction(auction.id)}>Delete</button>
       </div>
+      <Link to={`/auctions/${auction.id}/bidders`}><button>View bidders</button></Link>
     </div>
   )
 }
