@@ -1,6 +1,7 @@
 class AuctionsController < ApplicationController
   before_action :set_auction, only: %i[show update destroy]
   before_action :authorize_request
+  before_action :check_auction_user, only: %i[show update destroy]
 
   # GET /auctions
   def index
@@ -50,5 +51,9 @@ class AuctionsController < ApplicationController
   def auction_params
     params.require(:auction).permit(:title, :location, :status, :organization, :portion_collected, :tax_rate,
                                     :credit_card_fee, :dates, :notes, :user_id)
+  end
+
+  def check_auction_user
+    render json: 'unauthorized', status: :unauthorized unless check_user(@auction.user.id)
   end
 end

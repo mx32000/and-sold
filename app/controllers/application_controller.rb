@@ -23,4 +23,8 @@ class ApplicationController < ActionController::API
       render json: { errors: e.message }, status: :unauthorized
     end
   end
+
+  def check_user(id)
+    @current_user.id == id
+  end
 end

@@ -19,7 +19,7 @@ export default function AuctionContainer(props) {
       setAuction(auction);
     }
     fetchAuction();
-  }, []);
+  }, [auctionId]);
 
   return(
     <Layout signedIn={true} auctionId={auctionId} handleLogout={handleLogout}>

@@ -2,7 +2,6 @@ import './App.css';
 import { Switch, Route, useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
-import { Redirect } from 'react-router';
 import SignIn from './screens/SignIn';
 import SignUp from './screens/SignUp';
 import AuctionsContainer from './containers/AuctionsContainer';

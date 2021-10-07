@@ -8,9 +8,11 @@ export default function Bidders(props) {
     { title: "Number", attribute: "number" },
     { title: "Name", attribute: "name" },
     { title: "Phone number", attribute: "phone_number" },
-    { title: "Tax-exempt?", attribute: "tax_exempt" },
+    { title: "Tax-exempt?", attribute: "tax_exempt", boolean: true },
     { title: "Bought lots?" }
   ]
+
+  const convertBoolean = bool => bool ? "Yes" : "No";
 
   return(
     <div className="bidders">
@@ -31,7 +33,9 @@ export default function Bidders(props) {
                   columns.map( column => 
                   <div className="data" key={`${column.title}${bidder.id}`}>
                     {
-                      column.attribute ? bidder[column.attribute] : ""
+                      column.attribute
+                        ? (column.boolean ? convertBoolean(bidder[column.attribute]) : bidder[column.attribute])
+                        : "lots"
                     }
                   </div>)
                 }

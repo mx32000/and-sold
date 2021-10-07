@@ -17,7 +17,9 @@ export default function AuctionsContainer(props) {
       const auctions = await getUserAuctions();
       setUserAuctions(auctions);
     }
-    fetchAuctions();
+    if (user) {
+      fetchAuctions();
+    }
   }, [user])
 
   if (!user) return <Layout />

@@ -2,6 +2,8 @@ class DealersController < ApplicationController
   before_action :set_dealer, only: %i[show update destroy]
   before_action :set_auction, only: %i[index create]
   before_action :authorize_request
+  before_action :check_dealer_user, only: %i[show update destroy]
+  before_action :check_auction_user, only: %i[index create]
 
   # GET /auctions/1/dealers
   def index
@@ -59,5 +61,13 @@ class DealersController < ApplicationController
   # Only allow a list of trusted parameters through.
   def dealer_params
     params.require(:dealer).permit(:name, :phone_number, :email, :address)
+  end
+
+  def check_auction_user
+    render json: 'unauthorized', status: :unauthorized unless check_user(@auction.user.id)
+  end
+
+  def check_dealer_user
+    render json: 'unauthorized', status: :unauthorized unless check_user(@dealer.user.id)
   end
 end
