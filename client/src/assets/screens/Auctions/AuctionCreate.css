@@ -1,0 +1,10 @@
+.auction-create form {
+  display: flex;
+  flex: 3fr 2fr;
+}
+
+.auction-create form .details {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}

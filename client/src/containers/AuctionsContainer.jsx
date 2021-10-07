@@ -1,15 +1,16 @@
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useHistory } from "react-router-dom";
 import AuctionCreate from "../screens/Auctions/AuctionCreate";
 import AuctionEdit from "../screens/Auctions/AuctionEdit";
 import AuctionContainer from "./AuctionContainer";
 import Auctions from "../screens/Auctions/Auctions";
 import { useEffect, useState } from "react";
-import { getUserAuctions } from "../services/auctions";
+import { createAuction, getUserAuctions } from "../services/auctions";
 import Layout from "../components/Layout";
 
 export default function AuctionsContainer(props) {
   const [userAuctions, setUserAuctions] = useState([]);
   const { user, handleLogout } = props;
+  const history = useHistory();
 
   useEffect(() => {
     const fetchAuctions = async () => {
@@ -20,6 +21,12 @@ export default function AuctionsContainer(props) {
   }, [props.user])
 
   if (!user) return <Layout />
+
+  const handleCreateAuction = async auctionData => {
+    const newAuction = await createAuction(auctionData);
+    setUserAuctions(prevState => [...prevState, newAuction]);
+    history.push(`/auctions/${newAuction.id}`);
+  }
 
   return(
     <div className="auctions-container">
