@@ -1,13 +1,19 @@
+import { Link } from "react-router-dom";
+
 export default function AuctionDetail(props) {
   const { auction } = props;
-  const { title, status, organization, location, dates, notes } = auction;
   return(
+    auction &&
     <div className="auction-detail">
       <h1>Auction details</h1>
       <div className="details">
-        <h2>{title}</h2>
-        <p>Status: {status}</p>
-        <p>Organization: {organization}</p>
+        <h2>{auction.title}</h2>
+        <p>Status: {auction.status}</p>
+        <p>Organization: {auction.organization}</p>
+        <p>Location: {auction.location}</p>
+        <p>Dates: {auction.dates}</p>
+        <p>Notes: {auction.notes}</p>
+        <Link to={`/auctions/${auction.id}/edit`}><button>Edit</button></Link>
       </div>
     </div>
   )
