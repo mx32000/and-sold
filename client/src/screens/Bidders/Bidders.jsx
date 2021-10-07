@@ -35,7 +35,7 @@ export default function Bidders(props) {
                     {
                       column.attribute
                         ? (column.boolean ? convertBoolean(bidder[column.attribute]) : bidder[column.attribute])
-                        : "lots"
+                        : convertBoolean(bidder.lots.length > 0)
                     }
                   </div>)
                 }
