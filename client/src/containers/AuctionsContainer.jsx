@@ -18,7 +18,7 @@ export default function AuctionsContainer(props) {
       setUserAuctions(auctions);
     }
     fetchAuctions();
-  }, [props.user])
+  }, [user])
 
   if (!user) return <Layout />
 
