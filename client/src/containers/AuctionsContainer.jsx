@@ -43,6 +43,7 @@ export default function AuctionsContainer(props) {
   }
 
   return(
+    user &&
     <div className="auctions-container">
       <Switch>
         <Route path="/auctions/new">
