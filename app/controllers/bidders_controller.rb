@@ -32,7 +32,7 @@ class BiddersController < ApplicationController
     @bidder.number ||= Bidder.order(number: :desc).first.number + 1
 
     if @bidder.save
-      render json: @bidder, status: :created
+      render json: @bidder, include: :lots, status: :created
     else
       render json: @bidder.errors, status: :unprocessable_entity
     end
@@ -41,7 +41,7 @@ class BiddersController < ApplicationController
   # PATCH/PUT /auctions/1/bidders/1
   def update
     if @bidder.update(bidder_params)
-      render json: @bidder
+      render json: @bidder, include: :lots
     else
       render json: @bidder.errors, status: :unprocessable_entity
     end
