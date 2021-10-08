@@ -30,7 +30,7 @@ export default function BiddersContainer(props) {
           <BidderEdit />
         </Route>
         <Route path="/auctions/:auction_id/bidders/:id">
-          <BidderDetail />
+          <BidderDetail bidders={auctionBidders}/>
         </Route>
         <Route path="/auctions/:auction_id/bidders">
           <Bidders bidders={auctionBidders}/>

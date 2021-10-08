@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, useParams } from "react-router-dom"
 import "../../assets/screens/Bidders/Bidders.css"
 
@@ -10,7 +11,8 @@ export default function Bidders(props) {
     { title: "Name", attribute: "name" },
     { title: "Phone number", attribute: "phone_number" },
     { title: "Tax-exempt?", attribute: "tax_exempt", boolean: true },
-    { title: "Bought lots?" }
+    { title: "Bought lots?" },
+    { title: "" }
   ]
 
   const convertBoolean = bool => bool ? "Yes" : "No";
@@ -33,18 +35,21 @@ export default function Bidders(props) {
           </>
           {
             bidders.map(bidder => (
-              <>
+              <React.Fragment key={`row${bidder.id}`}>
                 {
-                  columns.map( column => 
-                  <div className={`data ${column.attribute || "lots"}`} key={`${column.title}${bidder.id}`}>
-                    {
-                      column.attribute
-                        ? (column.boolean ? convertBoolean(bidder[column.attribute]) : bidder[column.attribute])
-                        : convertBoolean(bidder.lots.length > 0)
-                    }
-                  </div>)
+                  columns.map(column => 
+                    <div className={`data ${column.attribute || "lots"}`} key={`${column.title}${bidder.id}`}>
+                      {
+                        column.title 
+                        ? (column.attribute
+                          ? (column.boolean ? convertBoolean(bidder[column.attribute]) : bidder[column.attribute])
+                          : convertBoolean(bidder.lots.length > 0))
+                        : <Link to={`/auctions/${auctionId}/bidders/${bidder.id}`}><button>View</button></Link>
+                      }
+                    </div>
+                  )
                 }
-              </>
+              </React.Fragment>
             ))
           }
         </div>

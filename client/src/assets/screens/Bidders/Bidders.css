@@ -1,6 +1,6 @@
 .bidders .bidders-list {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(6, auto);
   justify-items: end;
   column-gap: 15px;
   margin: 5%;
