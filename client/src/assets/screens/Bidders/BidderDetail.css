@@ -1,0 +1,7 @@
+.bidder-details-container {
+  display: flex;
+}
+
+.bidder-details-container .bidder-details {
+  width: 50%;
+}
