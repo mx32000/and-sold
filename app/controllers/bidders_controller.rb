@@ -73,6 +73,6 @@ class BiddersController < ApplicationController
   end
 
   def check_bidder_user
-    render json: 'unauthorized', status: :unauthorized unless check_user(@bidder.user.id)
+    render json: 'unauthorized', status: :unauthorized unless check_user(@bidder.auction.user.id)
   end
 end

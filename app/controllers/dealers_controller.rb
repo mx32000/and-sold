@@ -68,6 +68,6 @@ class DealersController < ApplicationController
   end
 
   def check_dealer_user
-    render json: 'unauthorized', status: :unauthorized unless check_user(@dealer.user.id)
+    render json: 'unauthorized', status: :unauthorized unless check_user(@dealer.auction.user.id)
   end
 end

@@ -29,9 +29,9 @@ export default function BiddersContainer(props) {
 
   const handleEditBidder = async (id, bidderData) => {
     const updatedBidder = await editAuctionBidder(auction.id, id, bidderData);
-    setAuctionBidders(prevState => prevState.filter(
-      auctionBidder => auctionBidder.id === Number(id) ? updatedBidder : auctionBidder
-    ));
+    setAuctionBidders(prevState => {
+      prevState.filter(auctionBidder => auctionBidder.id === Number(id) ? updatedBidder : auctionBidder)
+    });
     history.push(`/auctions/${auction.id}/bidders/${updatedBidder.id}`)
   }
 
