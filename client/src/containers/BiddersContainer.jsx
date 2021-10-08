@@ -21,8 +21,8 @@ export default function BiddersContainer(props) {
     }
   }, [auction])
 
-  const handleAddBidder = bidderData => {
-    const newBidder = createAuctionBidder(auction.id, bidderData);
+  const handleCreateBidder = async bidderData => {
+    const newBidder = await createAuctionBidder(auction.id, bidderData);
     setAuctionBidders(prevState => [...prevState, newBidder]);
     history.push(`/auctions/${auction.id}/bidders/${newBidder.id}`)
   }
@@ -31,7 +31,7 @@ export default function BiddersContainer(props) {
     <div className="bidders-container">
       <Switch>
         <Route path="/auctions/:auction_id/bidders/new">
-          <BidderCreate handleAddBidder={handleAddBidder}/>
+          <BidderCreate handleCreateBidder={handleCreateBidder}/>
         </Route>
         <Route path="/auctions/:auction_id/bidders/:id/edit">
           <BidderEdit />

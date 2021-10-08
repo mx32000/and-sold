@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 
-export default function BidderCreate() {
+export default function BidderCreate(props) {
   const [form, setForm] = useState({
     name: "",
     phone_number: "",
@@ -19,10 +19,15 @@ export default function BidderCreate() {
     setForm(prevState => ({ ...prevState, [name]: name === "tax_exempt" ? booleanize(value) : value}));
   }
 
+  const handleSubmit = e => {
+    e.preventDefault();
+    props.handleCreateBidder(form);
+  }
+
   return(
     <div className="bidder-create">
       <h1>Register bidder</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="col1 details">
           <label htmlFor="name">Name</label>
           <input
@@ -60,11 +65,13 @@ export default function BidderCreate() {
           />
         </div>
         <div className="col2 details">
+          <label htmlFor="tax_exempt">Tax-exempt?</label>
           <select name="tax_exempt" id="tax_exempt" value={tax_exempt} onChange={handleChange}>
             <option value={true}>Yes</option>
             <option value={false}>No</option>
           </select>
         </div>
+        <button type="submit">Register</button>
       </form>
     </div>
   )

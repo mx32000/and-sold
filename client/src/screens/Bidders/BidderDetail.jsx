@@ -15,6 +15,8 @@ export default function BidderDetail(props) {
     }
   }, [bidders, id])
 
+  console.log(bidder);
+
   return(
     bidder &&
     <div className="bidder-detail">
