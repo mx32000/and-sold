@@ -30,9 +30,10 @@ export default function BidderDetail(props) {
         </div>
         <div className="bidder-lots">
           <h4>Lots</h4>
-          {bidder.lots.map(lot => 
-            <p key={lot.id}>{lot.number} - {lot.description} - ${lot.price.toFixed(2)}</p>
-          )}
+          {bidder.lots.length 
+            ? bidder.lots.map(lot => 
+              <p key={lot.id}>{lot.number} - {lot.description} - ${lot.price.toFixed(2)}</p>
+            ) : <p>This bidder has not purchased lots</p>}
         </div>
       </div>
     </div>

@@ -27,7 +27,7 @@ export default function AuctionEdit(props) {
     if (auctions.length) {
       prefillForm()
     }
-  }, [auctions, auctionId])
+  }, [props.auctions, auctionId])
   
   const handleChange = e => {
     const { name, value } = e.target;
