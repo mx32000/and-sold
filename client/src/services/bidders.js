@@ -9,3 +9,8 @@ export const createAuctionBidder = async (auctionId, bidderData) => {
   const res = await api.post(`/auctions/${auctionId}/bidders`, bidderData);
   return res.data;
 }
+
+export const editAuctionBidder = async (auctionId, id, bidderData) => {
+  const res = await api.put(`/auctions/${auctionId}/bidders/${id}`, bidderData);
+  return res.data;
+}

@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { useParams } from "react-router-dom"
 
 export default function BidderCreate(props) {
   const [form, setForm] = useState({
@@ -10,7 +9,7 @@ export default function BidderCreate(props) {
     tax_exempt: false
   })
 
-  const { name, phone_number, address, email_address, tax_exempt } = form;
+  const { name, phone_number, address, email, tax_exempt } = form;
 
   const booleanize = str => str === "true" ? true : false;
 
@@ -52,6 +51,7 @@ export default function BidderCreate(props) {
             type="text"
             name="address"
             id="address"
+            value={address}
             placeholder="123 Main St, Townsville, IA 52404"
             onChange={handleChange}
           />
@@ -60,6 +60,7 @@ export default function BidderCreate(props) {
             type="text"
             name="email"
             id="email"
+            value={email}
             placeholder="rocky.smith@email.com"
             onChange={handleChange}
           />
