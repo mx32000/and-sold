@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
+import Button from "../components/Button";
 import "../assets/screens/SignIn.css";
 
 export default function SignIn(props) {
@@ -37,7 +38,7 @@ export default function SignIn(props) {
         placeholder="Password"
         onChange={handleChange}
       />
-      <button>Sign in</button>
+      <Button text="Sign in" />
       <Link to="/signup">Don't have an account? Sign up here!</Link>
     </form>
   )
