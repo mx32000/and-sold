@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
+import Button from "../components/Button";
 import "../assets/screens/SignUp.css";
 
 export default function SignUp(props) {
@@ -64,7 +65,7 @@ export default function SignUp(props) {
         value={form.password_confirmation}
         onChange={handleChange}
       />
-      <button>Get started!</button>
+      <Button text="Get started!" />
       <Link to="/signin">Already have an account? Sign in here!</Link>
     </form>
   )
