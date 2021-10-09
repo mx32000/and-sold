@@ -1,9 +1,46 @@
+.auction-create h1 {
+  font-family: 'Andika', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin: 50px 0 40px 0;
+}
+
 .auction-create form {
   display: flex;
+  justify-content: space-between;
+}
+
+.auction-create form label {
+  font-size: 18px;
+  margin: 13px 0 5px 13px;
 }
 
 .auction-create form .details {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  min-width: 40%;
+}
+
+.auction-create form textarea {
+  resize: none;
+}
+
+.auction-create form #dates {
+  height: 85px;
+}
+
+.auction-create form #notes {
+  height: 160px;
+}
+
+.auction-create .financial h2 {
+  font-size: 24px;
+  font-family: 'Andika', sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.auction-create .button {
+  margin-top: 30px;
+  align-self: center;
 }

@@ -10,7 +10,7 @@ body {
   color: #211E24;
 }
 
-input, textarea {
+input, textarea, select {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   padding: 11px 13px;

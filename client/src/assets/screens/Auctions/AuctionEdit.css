@@ -1,0 +1,50 @@
+.auction-edit h1 {
+  font-family: 'Andika', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin: 50px 0 40px 0;
+}
+
+.auction-edit form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.auction-edit form label {
+  font-size: 18px;
+  margin: 13px 0 5px 13px;
+}
+
+.auction-edit form .details {
+  display: flex;
+  flex-direction: column;
+  min-width: 40%;
+}
+
+.auction-edit form textarea {
+  resize: none;
+}
+
+.auction-edit form #dates {
+  height: 85px;
+}
+
+.auction-edit form #notes {
+  height: 160px;
+}
+
+.auction-edit .financial h2 {
+  font-size: 24px;
+  font-family: 'Andika', sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.auction-edit .button {
+  margin-top: 30px;
+  align-self: center;
+}
+
+.auction-edit select {
+  width: 50%;
+}
