@@ -2,5 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+}
+
+#sign-in h1 {
+  font-family: 'Andika', sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  margin: 70px 0 40px 0;
+}
+
+#sign-in input {
+  width: 25%;
+  margin: 10px;
 }
