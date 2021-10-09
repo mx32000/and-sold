@@ -1,26 +1,24 @@
 import { Link } from "react-router-dom";
 import Auction from "../../components/Auction";
+import Button from "../../components/Button";
+import "../../assets/screens/Auctions/Auctions.css"
 
 export default function Auctions(props) {
   return(
-    <div className="auctions">
-      {
-        props.auctions.length ? (
-          <>
-            <h1>Your auctions</h1>
-            {
-              props.auctions.map(auction => <Auction auction={auction} key={auction.id}/>)
-            }
-            <p>Have another auction to add?</p>
-            <Link to="/auctions/new"><button>Add an auction</button></Link>
-          </>
-        ) : (
-          <>
-            <p>Looks like you don't have any auctions yet.</p>
-            <Link to="/auctions/new"><button>Create an auction!</button></Link>
-          </>
-        )
-      }
-    </div>
-)
+    props.auctions.length ? (
+      <div className="auctions nonempty">
+        <h1 class="title">Your auctions</h1>
+        {
+          props.auctions.map(auction => <Auction auction={auction} key={auction.id}/>)
+        }
+        <p>Have another auction to add?</p>
+        <Link to="/auctions/new"><Button text="Add an auction" /></Link>
+      </div>
+    ) : (
+      <div className="auctions empty">
+        <p className="title">Looks like you don't have any auctions yet.</p>
+        <Link className="big-create" to="/auctions/new"><Button text="Create an auction!" /></Link>
+      </div>
+    )
+  )
 }

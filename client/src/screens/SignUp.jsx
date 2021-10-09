@@ -26,6 +26,7 @@ export default function SignUp(props) {
     <form onSubmit={handleSubmit} id="sign-up">
       <h1>Sign up</h1>
       <input
+        required
         type="text"
         name="name"
         id="name"
@@ -34,6 +35,7 @@ export default function SignUp(props) {
         onChange={handleChange}
       />
       <input
+        required
         type="text"
         name="username"
         id="username"
@@ -42,6 +44,7 @@ export default function SignUp(props) {
         onChange={handleChange}
       />
       <input
+        required
         type="text"
         name="email"
         id="email"
@@ -50,6 +53,7 @@ export default function SignUp(props) {
         onChange={handleChange}
       />
       <input
+        required
         type="password"
         name="password"
         id="password"
@@ -58,6 +62,7 @@ export default function SignUp(props) {
         onChange={handleChange}
       />      
       <input
+        required
         type="password"
         name="password_confirmation"
         id="passwordConfirmation"

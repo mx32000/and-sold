@@ -2,8 +2,12 @@
   background: none;
   border: none;
   background-color: #ff771b;
-  color: #f0f0f4;
+  color: #f4f4f0;
   padding: 7px 20px;
   cursor: pointer;
   font-size: 14px;
+}
+
+.button:hover {
+  background-color: #957454;
 }
