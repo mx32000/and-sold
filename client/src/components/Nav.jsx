@@ -5,14 +5,14 @@ export default function Nav(props) {
   const { signedIn, auctionId, handleLogout } = props;
   return(
     <nav>
-      <p>And...Sold!</p>
+      <p className="logo">And...Sold!</p>
       <div className="nav">
         {
           !signedIn
             ? (
                 <>
-                  <Link to="/signin">Sign in</Link>
-                  <Link to="/signup">Sign up</Link>
+                  <Link className="link" to="/signin">Sign in</Link>
+                  <Link className="link" to="/signup">Sign up</Link>
                 </>
               )
             : (
@@ -20,13 +20,13 @@ export default function Nav(props) {
                 {
                   props.auctionId &&
                   <>
-                    <Link to={`/auctions/${auctionId}`}>Main page</Link>
-                    <Link to={`/auctions/${auctionId}/bidders`}>Bidders</Link>
-                    <Link to={`/auctions/${auctionId}/dealers`}>Dealers</Link>
+                    <Link className="link" to={`/auctions/${auctionId}`}>Main page</Link>
+                    <Link className="link" to={`/auctions/${auctionId}/bidders`}>Bidders</Link>
+                    <Link className="link" to={`/auctions/${auctionId}/dealers`}>Dealers</Link>
                   </>
                 }
-                <Link to={"/auctions"}>Auctions</Link>
-                <button onClick={handleLogout}>Sign out</button>
+                <Link className="link" to={"/auctions"}>Auctions</Link>
+                <button className="link" onClick={handleLogout}>Sign out</button>
               </>
             )
         }
