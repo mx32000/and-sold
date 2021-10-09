@@ -22,7 +22,8 @@ export default function SignIn(props) {
   return(
     <form onSubmit={handleSubmit} id="sign-in">
       <h1>Sign in</h1>
-      <input 
+      <input
+        required
         type="text" 
         name="username" 
         id="username" 
@@ -30,7 +31,8 @@ export default function SignIn(props) {
         onChange={handleChange} 
         placeholder="Username"
       />
-      <input 
+      <input
+        required
         type="password"
         name="password"
         id="password"

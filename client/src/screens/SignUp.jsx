@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
+import Button from "../components/Button";
 import "../assets/screens/SignUp.css";
 
 export default function SignUp(props) {
@@ -25,6 +26,7 @@ export default function SignUp(props) {
     <form onSubmit={handleSubmit} id="sign-up">
       <h1>Sign up</h1>
       <input
+        required
         type="text"
         name="name"
         id="name"
@@ -33,6 +35,7 @@ export default function SignUp(props) {
         onChange={handleChange}
       />
       <input
+        required
         type="text"
         name="username"
         id="username"
@@ -41,6 +44,7 @@ export default function SignUp(props) {
         onChange={handleChange}
       />
       <input
+        required
         type="text"
         name="email"
         id="email"
@@ -49,6 +53,7 @@ export default function SignUp(props) {
         onChange={handleChange}
       />
       <input
+        required
         type="password"
         name="password"
         id="password"
@@ -57,6 +62,7 @@ export default function SignUp(props) {
         onChange={handleChange}
       />      
       <input
+        required
         type="password"
         name="password_confirmation"
         id="passwordConfirmation"
@@ -64,7 +70,7 @@ export default function SignUp(props) {
         value={form.password_confirmation}
         onChange={handleChange}
       />
-      <button>Get started!</button>
+      <Button text="Get started!" />
       <Link to="/signin">Already have an account? Sign in here!</Link>
     </form>
   )
