@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Button from "../../components/Button";
 import "../../assets/screens/Auctions/AuctionCreate.css";
 
 export default function AuctionCreate(props) {
@@ -104,7 +105,7 @@ export default function AuctionCreate(props) {
             placeholder=".10"
             onChange={handleChange}
           />
-          <button type="submit">Submit</button>
+          <Button text="Submit" />
         </div>
       </form>
     </div>

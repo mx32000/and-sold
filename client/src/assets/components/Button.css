@@ -4,6 +4,7 @@
   background-color: #ff771b;
   color: #f4f4f0;
   padding: 7px 20px;
+  width: fit-content;
   cursor: pointer;
   font-size: 14px;
 }
