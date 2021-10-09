@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Layout from "../../components/Layout";
+import Button from "../../components/Button";
+import "../../assets/screens/Auctions/AuctionEdit.css"
 
 export default function AuctionEdit(props) {
   const [form, setForm] = useState({
@@ -48,7 +50,7 @@ export default function AuctionEdit(props) {
   return(
     <Layout signedIn={true} auctionId={auctionId} handleLogout={handleLogout}>
       {
-        <div className="auction-create">
+        <div className="auction-edit">
           <h1>Enter auction details</h1>
           <form onSubmit={handleSubmit}>
             <div className="description details">
@@ -132,7 +134,7 @@ export default function AuctionEdit(props) {
                 <option value="ongoing">ongoing</option>
                 <option value="complete">complete</option>
               </select>
-              <button type="submit">Submit</button>
+              <Button text="Submit" />
             </div>
           </form>
         </div>
