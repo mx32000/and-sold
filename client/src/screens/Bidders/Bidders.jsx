@@ -23,7 +23,7 @@ export default function Bidders(props) {
       <h1>Bidders</h1>
       <Link to={`/auctions/${auctionId}/bidders/new`}><Button text="Add a bidder" /></Link>
       {
-        props.bidders.length &&
+        props.bidders.length > 0 &&
         <div className="bidders-list">
           <>
             { 
