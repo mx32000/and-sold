@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Button from "../../components/Button";
 import "../../assets/screens/Bidders/BidderDetail.css";
 
 export default function BidderDetail(props) {
@@ -26,7 +27,7 @@ export default function BidderDetail(props) {
           <p>Address: {bidder.address}</p>
           <p>Email: {bidder.email}</p>
           <p>{bidder.tax_exempt ? "Tax-exempt" : "Not tax-exempt"}</p>
-          <Link to={`/auctions/${auction_id}/bidders/${id}/edit`}><button>Edit</button></Link>
+          <Link to={`/auctions/${auction_id}/bidders/${id}/edit`} className="edit-button"><Button text="Edit" /></Link>
         </div>
         <div className="bidder-lots">
           <h4>Lots</h4>
