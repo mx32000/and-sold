@@ -13,6 +13,7 @@
 
 #sign-up input {
   width: 25%;
+  min-width: 250px;
   margin: 10px;
 }
 
@@ -23,4 +24,19 @@
 #sign-up a {
   color: #211e24;
   text-decoration: none;
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 1024px) {
+  #sign-up h1 {
+    margin-top: 40px;
+    font-size: 48px;
+  }
+}
+
+@media only screen and (max-width: 898px) {
+  #sign-up h1 {
+    margin: 10px 0 10px 0;
+    font-size: 36px;
+  }
 }
