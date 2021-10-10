@@ -1,0 +1,36 @@
+.auction-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.auction-detail .details {
+  width: 50%;
+}
+
+.auction-detail h1 {
+  margin: 30px 0 20px 0;
+  font-family: 'Andika', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+.auction-detail h2 {
+  margin-bottom: 14px;
+}
+
+.auction-detail p {
+  margin: 7px 0;
+}
+
+.auction-detail .buttons {
+  display: flex;
+  margin: 20px 0 100px 0;
+}
+
+.auction-detail .buttons .delete {
+  margin: 0 27px;
+}
+
+.auction-detail .view-bidders {
+  align-self: center;
+}

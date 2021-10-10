@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import Button from "../../components/Button"
+import "../../assets/screens/Auctions/AuctionDetail.css";
 
 export default function AuctionDetail(props) {
   const { auction, handleRemoveAuction } = props;
@@ -17,10 +19,12 @@ export default function AuctionDetail(props) {
         <p>Credit card convenience fee: {auction.credit_card_fee}</p>
         <p>Portion of sales collected: {auction.portion_collected}</p>
         <p>Notes: {auction.notes}</p>
-        <Link to={`/auctions/${auction.id}/edit`}><button>Edit</button></Link>
-        <button onClick={() => handleRemoveAuction(auction.id)}>Delete</button>
+        <div className="buttons">
+          <Link to={`/auctions/${auction.id}/edit`}><Button text="Edit" id="edit-auction"/></Link>
+          <Button onClick={() => handleRemoveAuction(auction.id)} text="Delete" className="delete"/>
+        </div>
       </div>
-      <Link to={`/auctions/${auction.id}/bidders`}><button>View bidders</button></Link>
+      <Link to={`/auctions/${auction.id}/bidders`} className="view-bidders"><Button text="View bidders" /></Link>
     </div>
   )
 }
