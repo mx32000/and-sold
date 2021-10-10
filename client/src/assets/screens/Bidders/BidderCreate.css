@@ -1,0 +1,56 @@
+.bidder-create {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.bidder-create form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bidder-create h1 {
+  font-size: 36px;
+  font-family: 'Andika', sans-serif;
+  font-weight: 400;
+  margin: 50px 0 40px 0;
+}
+
+.bidder-create form .bidder-create-container {
+  display: flex;
+}
+
+.bidder-create form .bidder-create-container label {
+  font-size: 18px;
+}
+
+.bidder-create form .bidder-create-container .details {
+  display: flex;
+  flex-direction: column;
+}
+
+.bidder-create form .bidder-create-container .col1 {
+  width: 80%;
+}
+
+.bidder-create form .bidder-create-container .col1 label {
+  margin: 5px 13px;
+}
+
+.bidder-create form .bidder-create-container .col1 input {
+  width: 80%;
+}
+
+.bidder-create form .bidder-create-container .col2 select {
+  width: fit-content;
+}
+
+.bidder-create form .bidder-create-container .col2 label {
+  margin: 5px 0;
+}
+
+.bidder-create form .button {
+  align-self: center;
+  margin: 50px 0;
+}
