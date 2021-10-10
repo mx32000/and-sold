@@ -19,10 +19,12 @@ export default function AuctionDetail(props) {
         <p>Credit card convenience fee: {auction.credit_card_fee}</p>
         <p>Portion of sales collected: {auction.portion_collected}</p>
         <p>Notes: {auction.notes}</p>
-        <Link to={`/auctions/${auction.id}/edit`}><Button text="Edit" /></Link>
-        <Button onClick={() => handleRemoveAuction(auction.id)} text="Delete" />
+        <div className="buttons">
+          <Link to={`/auctions/${auction.id}/edit`}><Button text="Edit" id="edit-auction"/></Link>
+          <Button onClick={() => handleRemoveAuction(auction.id)} text="Delete" className="delete"/>
+        </div>
       </div>
-      <Link to={`/auctions/${auction.id}/bidders`}><Button text="View bidders" /></Link>
+      <Link to={`/auctions/${auction.id}/bidders`} className="view-bidders"><Button text="View bidders" /></Link>
     </div>
   )
 }
