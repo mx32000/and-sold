@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :auctions
+  has_many :auctions, dependent: :destroy
   has_secure_password
 
   validates :name, presence: true
