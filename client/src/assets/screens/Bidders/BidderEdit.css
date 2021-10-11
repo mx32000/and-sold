@@ -1,6 +1,6 @@
 .bidder-edit {
   display: flex;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -53,4 +53,45 @@
 .bidder-edit form .button {
   align-self: center;
   margin: 50px 0;
+}
+
+@media only screen and (max-width: 898px) {
+  .bidder-edit {
+    width: 100%;
+  }
+
+  .bidder-edit h1 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .bidder-edit {
+    width: 100%;
+  }
+
+  .bidder-edit h1 {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+
+
+
+
+
+  .bidder-edit form .bidder-edit-container{
+    flex-direction: column;
+  }
+
+  .bidder-edit form .bidder-edit-container .col2, .bidder-edit form .bidder-edit-container .col1 {
+    width: 100%;
+  }
+
+  .bidder-edit form .bidder-edit-container .col1 input {
+    width: 100%;
+  }
+
+  .bidder-edit form .bidder-edit-container .col2 {
+    align-items: center;
+  }
 }
