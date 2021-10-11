@@ -33,3 +33,31 @@
 .bidder-details-container .bidder-lots {
   min-width: 40%;
 }
+
+@media only screen and (max-width: 898px) {
+  .bidder-detail h1 {
+    text-align: center;
+  }
+
+  .bidder-details-container {
+    flex-direction: column;
+  }
+
+  .bidder-details-container .bidder-details .edit-button {
+    margin: 20px 0;
+  }
+
+  .bidder-details-container .bidder-lots {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .bidder-details-container .bidder-details h2 {
+    text-align: center;
+  }
+
+  .bidder-details-container .bidder-details .edit-button {
+    align-self: center;
+  }
+}
