@@ -34,3 +34,32 @@
 .auction-detail .view-bidders {
   align-self: center;
 }
+
+@media only screen and (max-width: 898px) {
+  .auction-detail .details {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .auction-detail .details {
+    width: 100%;
+  }
+
+  .auction-detail h1 {
+    margin: 0 0 10px 0;
+  }
+
+  .auction-detail h1, .auction-detail h2 {
+    text-align: center;
+  }
+
+  .auction-detail .buttons {
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+  }
+
+  .auction-detail .buttons .delete {
+    margin: 0;
+  }
+}
