@@ -48,3 +48,32 @@
 .auction-edit select {
   width: 50%;
 }
+
+@media only screen and (max-width: 670px) {
+  .auction-edit h1, .auction-edit h2 {
+    text-align: center;
+  }
+
+  .auction-edit .financial h2 {
+    margin: 10px 0px;
+  }
+
+  .auction-edit form {
+    flex-direction: column;
+  }
+
+  .auction-edit form .status {
+    align-self: center;
+  }
+
+  .auction-edit form label.status {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .auction-edit h1 {
+    margin: 20px 0px;
+    font-size: 28px;
+  }
+}

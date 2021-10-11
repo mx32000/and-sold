@@ -21,8 +21,8 @@ export default function Nav(props) {
                   props.auctionId &&
                   <>
                     <Link className="link" to={`/auctions/${auctionId}`}>Main page</Link>
-                    <Link className="link" to={`/auctions/${auctionId}/bidders`}>Bidders</Link>
-                    <Link className="link" to={`/auctions/${auctionId}/dealers`}>Dealers</Link>
+                    <Link className="link optional" to={`/auctions/${auctionId}/bidders`}>Bidders</Link>
+                    <Link className="link optional" to={`/auctions/${auctionId}/dealers`}>Dealers</Link>
                   </>
                 }
                 <Link className="link" to={"/auctions"}>Auctions</Link>

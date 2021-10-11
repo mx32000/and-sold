@@ -8,6 +8,7 @@
 .auction-create form {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .auction-create form label {
@@ -30,7 +31,7 @@
 }
 
 .auction-create form #notes {
-  height: 160px;
+  height: 100px;
 }
 
 .auction-create .financial h2 {
@@ -43,4 +44,25 @@
 .auction-create .button {
   margin-top: 30px;
   align-self: center;
+}
+
+@media only screen and (max-width: 670px) {
+  .auction-create h1, .auction-create h2 {
+    text-align: center;
+  }
+
+  .auction-create .financial h2 {
+    margin: 10px 0px;
+  }
+
+  .auction-create form {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .auction-create h1 {
+    margin: 20px 0px;
+    font-size: 28px;
+  }
 }

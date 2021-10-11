@@ -26,7 +26,7 @@ export default function BidderDetail(props) {
           <p>Phone: {bidder.phone_number}</p>
           <p>Address: {bidder.address}</p>
           <p>Email: {bidder.email}</p>
-          <p>{bidder.tax_exempt ? "Tax-exempt" : "Not tax-exempt"}</p>
+          <p className="tax-exempt">{bidder.tax_exempt ? "Tax-exempt" : "Not tax-exempt"}</p>
           <Link to={`/auctions/${auction_id}/bidders/${id}/edit`} className="edit-button"><Button text="Edit" /></Link>
         </div>
         <div className="bidder-lots">
