@@ -128,8 +128,8 @@ export default function AuctionEdit(props) {
                 placeholder=".10"
                 onChange={handleChange}
               />
-              <label htmlFor="status">Status?</label>
-              <select name="status" id="status" value={status} onChange={handleChange}>
+              <label htmlFor="status" className="status">Status?</label>
+              <select name="status" id="status" value={status} onChange={handleChange} className="status">
                 <option value="upcoming">upcoming</option>
                 <option value="ongoing">ongoing</option>
                 <option value="complete">complete</option>
