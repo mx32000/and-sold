@@ -61,3 +61,73 @@
   padding: 3px 25px;
   margin: 6px 0;
 }
+
+@media only screen and (max-width: 1024px) {
+  .bidders .bidders-list .data, .bidders .bidders-list .heading {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 898px) {
+  .bidders .bidders-list {
+    grid-template-columns: min-content repeat(4, auto);
+  }
+
+  .bidders .bidders-list .name {
+    padding-left: 40px;
+  }
+
+  .bidders .bidders-list .tax_exempt {
+    display: none;
+  }
+
+  .bidders .bidders-list .lots {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .bidders .bidders-list {
+    grid-template-columns: min-content repeat(3, auto);
+  }
+
+  .bidders .bidders-list .phone_number {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .bidders .bidders-list {
+    grid-template-columns: min-content repeat(2, auto);
+  }
+
+  .bidders .bidders-list .lots {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .bidders h1 {
+    margin: 10px 0;
+    font-size: 30px;
+  }
+
+  .bidders .bidders-list {
+    box-sizing: border-box;
+    padding: 15px;
+  }
+
+  .bidders .bidders-list .heading {
+    display: none;
+  }
+
+  .bidders .bidders-list .name {
+    padding-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .bidders .bidders-list .number {
+    padding-left: 5px;
+  }
+}

@@ -28,7 +28,7 @@ export default function Bidders(props) {
           <>
             { 
               columns.map( column => (
-                <div className={`heading ${column.attribute || "lots"} odd-row`} key={column.title}>
+                <div className={`heading ${column.title ? (column.attribute || "lots") : "view"} odd-row`} key={column.title}>
                   {column.title}
                 </div>
               )) 
