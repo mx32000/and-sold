@@ -61,7 +61,6 @@ nav .nav .link {
 }
 
 @media screen and (max-width: 670px) {
-
   nav .nav .link.optional {
     display: none;
   }

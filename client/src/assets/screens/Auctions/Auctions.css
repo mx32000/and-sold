@@ -29,3 +29,10 @@
   font-size: 18px;
   margin: 60px 0 30px 0;
 }
+
+@media only screen and (max-width: 898px) {
+  .auctions.empty .title {
+    margin: 50px 0 50px 0;
+    font-size: 24px;
+  }
+}
